@@ -1,6 +1,12 @@
 export type redes = {
-  discord?: string,
-  twiter?: string,
-  instagram?: string,
-  facebook?: string,
+  discord?: URL,
+  twiter?: URL,
+  instagram?: URL,
+  facebook?: URL,
+}
+
+export type patrocinio = {
+  nombre: string,
+  logo: string,
+  descripcion: string
 }
