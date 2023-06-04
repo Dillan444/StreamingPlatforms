@@ -1,8 +1,8 @@
 export type redes = {
-  discord?: URL,
-  twiter?: URL,
-  instagram?: URL,
-  facebook?: URL,
+  discord?: string,
+  twiter?: string,
+  instagram?: string,
+  facebook?: string,
 }
 
 export type patrocinio = {

@@ -1,6 +1,7 @@
 import { Canal } from "./canal.js"
 import { Empresa } from "./empresa.js"
 import { Streamer } from "./streamer.js"
+import { redes } from "./type.js"
 
 export class Plataforma {
   nombre: string
@@ -28,7 +29,7 @@ export class Plataforma {
     console.log(mensaje)
   }
 
-  create_streamer(nickname: string, descripcion: string, redesSociales: object = {}) {
+  create_streamer(nickname: string, descripcion: string, redesSociales: redes = {}) {
     const newStreamer = new Streamer(nickname, descripcion, redesSociales, this)
     this.add_streamer(newStreamer)
 
@@ -45,5 +46,9 @@ export class Plataforma {
 
   private add_patrocinador(patrocinador: Empresa) {
     this.patrocinador = patrocinador
+  }
+
+  get_streamers() {
+    return this.streamers
   }
 }

@@ -23,6 +23,14 @@ export class Stream {
     return this.categorias
   }
 
+  get_datosBasicos(){
+    return {
+      "streamer": this.streamer.nickname,
+      "canal": this.canal.nombre,
+      "categorias": this.categorias.map(categoria => categoria.nombre)
+    }
+  }
+
   get_streamer() {
     return this.streamer
   }
